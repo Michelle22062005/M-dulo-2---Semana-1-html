@@ -116,12 +116,11 @@ p{
 
 /* Encabezado grande */
 .titulo{
-    margin: auto;
-    width: 100%;
+    width: 80%;
     padding: 10px;
     background-color: #ec93e2;
     border: 2px solid #751e76;
-    margin: 20px;
+    margin: auto;
     transition: background-color 0.3s ease;
 }
 /* Efecto hover */
@@ -156,18 +155,16 @@ a:hover{
 
 /* Galería de imágenes */
 .contenedor-imagenes{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 8rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 5rem;
     padding: 1rem;
     
 }
 
 /* Cada tarjeta de mascota */
 .item{
-    width: 100%;
+    width: 90%;
     height: 350px;
     overflow: hidden;
     border: 2px solid #751e76;
@@ -177,7 +174,7 @@ a:hover{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
