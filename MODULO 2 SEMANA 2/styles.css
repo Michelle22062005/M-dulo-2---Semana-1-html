@@ -1,0 +1,233 @@
+/* Reinicia el modelo de caja para todos los elementos */
+*{
+    box-sizing: border-box;
+
+}
+
+/* Estilo general del cuerpo de la página */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f9abda;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+/*Aqui va es estilo psra el encabezado (header)*/
+.title{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;  
+    gap: 10px;             
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: start;
+    border: 2px solid #fffa;
+    background-color: #ef7ee2;
+    transition: background-color 0.3s ease;
+}
+/* Efecto hover del encabezado */
+.title:hover{
+    background-color: #c051b3;
+}
+.title nav a {
+    text-decoration: none;
+    color: #242020;
+    font-size: 18px;
+}
+
+/* para el elnace que lleva a la otra pagina*/
+.mascota{
+    color: #000c;
+    list-style: none;
+    text-decoration: none;
+}
+/* Cambia de color al pasar el mouse */
+.mascota:hover{
+    color: #ccc;
+}
+
+/* Sección "Sobre mí" */
+.sobre_mi{
+  
+    margin: auto;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: justify;
+}
+
+/* Estilo general de los párrafos */
+p{
+    color: #000c;
+}
+/* Sección de proyectos */
+.project{  
+    margin: auto;
+    padding-top: 10px;
+    width: 70%;
+    text-align: justify;
+}
+
+/* Estilo de los elementos de la lista de proyectos */
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #a14096;
+    border-radius: 10px;
+}
+.project-item{
+    background-color: #e460f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.project li{
+    color: #fff;
+    margin: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+/*Es donde va el estilo de contacto*/
+.contact {
+    background-color: #dd26ee; 
+    padding: 5px;
+    text-align: center;
+    color: #000c;
+    border: 2px solid #612b5b;
+    margin-top: 50px;
+}
+
+
+/* Título de la sección contacto */
+.contact h2 {
+    margin-bottom: 20px;
+}
+/* Contenedor del formulario */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+/* Campos del formulario */
+.contact input {
+    width: 250px;
+    padding: 5px;
+    border: 2px solid #7838a2; 
+    border-radius: 10px;
+    background-color: #FFF7F1; 
+}
+
+/* Estilo al seleccionar un input */
+.contact input:focus {
+    outline: none;
+    border-color: #FFB5C2; 
+}
+
+/* Botón del formulario */
+.contact button {
+    background-color: #FFB5C2; 
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* Hover del botón */
+.contact button:hover {
+    background-color: #c051b3; 
+}
+
+
+
+/* estilo de mascotas*/
+
+/* Encabezado grande */
+.body-mascotas{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),   /* Oscurecimiento suave, 0.5 = 50% */
+        rgba(0, 0, 0, 0.5)
+    ), url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-meng-pet-attack-promotion-main-map-image_144684.jpg");
+}
+.titulo{
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #751e76;
+    color: #fff;
+}
+/* Efecto hover */
+.titulo:hover{
+    background-color: rgba(236, 165, 242, 0.9);
+    color: #000c;
+}
+.titulo h1{
+    text-align: center;
+}
+
+/* Botón estilo */
+.button{
+    background-color: #ee70f5;
+    margin: 1px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #751e76;   
+    transition: background-color 0.3s ease;
+}
+.button:hover{
+    background-color: #a543a7;
+}
+/* Enlaces generales */
+a{
+    color: #000c;
+}
+a:hover{
+    color: #ccc;
+}
+
+/* Galería de imágenes */
+.contenedor-imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cada tarjeta de mascota */
+.item{
+    width: 250px;
+    overflow: hidden;
+    border: 2px solid #751e76;
+    backdrop-filter: blur(4px);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hover de cada tarjeta */
+.item:hover{
+    transform: scale(1.06);
+    transition: 0.3s ease;
+    box-shadow: 0 8px 10px rgba(97, 14, 130, 0.2);
+    background-color: rgb(209, 137, 209);
+
+}
+/* Imágenes dentro de cada tarjeta */
+.item .imagen img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Parrafos del texto de las tarjetas */
+p{
+    text-align: justify;
+}
+
+  
