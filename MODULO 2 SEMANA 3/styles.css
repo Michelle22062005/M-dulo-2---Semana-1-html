@@ -1,0 +1,221 @@
+/* ==============================
+   VARIABLES GLOBALES
+============================== */
+:root {
+    --color-bg: #f9abda;
+    --color-dark: #000c;
+    --color-hover: #ccc;
+    --color-primary: #ef7ee2;
+    --color-primary-hover: #c051b3;
+    --color-card: #e460f0;
+    --color-card-border: #751e76;
+    --color-contact: #dd26ee;
+    --color-input-bg: #FFF7F1;
+    --color-input-border: #7838a2;
+    --radius: 0.6rem;
+    --radius-sm: 0.3rem;
+    --shadow-sm: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
+    --shadow-lg: 0 0.5rem 0.625rem rgba(97, 14, 130, 0.2);
+    --transition: 0.3s ease;
+    --font-main: "Cinzel", serif;
+}
+/* ==============================
+   RESET & BASE
+============================== */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+}
+p {
+    text-align: justify;
+}
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-hover);
+}
+/* ==============================
+   COMPONENTES REUTILIZABLES
+============================== */
+/* Botones */
+.btn,
+#button,
+.contact button {
+    background-color: #FFB5C2;
+    border: none;
+    padding: 0.75rem 0.56rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn{
+    margin: 10px;
+}
+#button:hover,
+.btn:hover,
+.contact button:hover {
+    background-color: var(--color-primary-hover);
+}
+/* Tarjetas / Items */
+.card,
+.item,
+.project-item {
+    background-color: var(--color-card);
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    border: 0.125rem solid var(--color-card-border);
+    box-shadow: var(--shadow-sm);
+    list-style: none;
+    transition: var(--transition);
+}
+.item:hover{
+    transform: scale(1.06);
+    transition: 0.3s ease;
+    box-shadow: 0 8px 10px rgba(97, 14, 130, 0.2);
+    background-color: rgb(209, 137, 209);
+
+}
+/* Imágenes dentro de cada tarjeta */
+.item .imagen img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Inputs */
+.input,
+.contact input {
+    max-width: 100%;
+    padding: 0.3rem;
+    border-radius: var(--radius);
+    background-color: var(--color-input-bg);
+    border: 0.1rem solid var(--color-input-border);
+}
+.input:focus,
+.contact input:focus {
+    outline: none;
+    border-color: #FFB5C2;
+}
+/* Grids */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+/* ==============================
+   HEADER
+============================== */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    background-color: var(--color-primary);
+    border: 0.125rem solid #fffa;
+    transition: var(--transition);
+}
+.title:hover {
+    background-color: var(--color-primary-hover);
+}
+.title nav a {
+    font-size: 1.125rem;
+}
+/* ==============================
+   SOBRE MÍ
+============================== */
+.sobre_mi {
+    margin: 1.8rem;
+}
+/* ==============================
+   PROYECTOS
+============================== */
+.project {
+    margin: 1.8rem;
+}
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    border: 0.1rem solid #a14096;
+    border-radius: var(--radius);
+    padding: 0.6rem;
+}
+/* ==============================
+   CONTACTO
+============================== */
+.contact {
+    background-color: var(--color-contact);
+    padding: 0.3rem;
+    text-align: center;
+    border: 0.1rem solid #612b5b;
+    margin-top: 3rem;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+/* ==============================
+   MASCOTAS
+============================== */
+.body-mascotas {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-meng-pet-attack-promotion-main-map-image_144684.jpg");
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#button{
+    max-width: 100px;
+    text-align: center;
+}
+.titulo h1{
+    text-align: center;
+    color: var(--color-input-bg);
+}
+.titulo p{
+    color: var(--color-input-bg);
+}
+
+.contenedor-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 900px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contenedor-imagenes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    .contenedor-imagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mascota {
+        flex-direction: column;
+    }
+}
+    
